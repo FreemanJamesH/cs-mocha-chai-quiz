@@ -2,26 +2,53 @@
 'use strict'
 
 const expect = require(`chai`).expect
-const lib = require(`../`)
+const area = require(`../areaCalc.js`)
+const poke = require(`../pokeSort.js`)
 
 describe(`areaCalc`, () => {
 
   it(`correctly computes triangle with sides 3, 4, 5`, () => {
-    expect(lib.areaCalc(3, 4, 5)).to.eql(6)
+    expect(area.areaCalc(3, 4, 5)).to.eql(6)
   })
 
   it(`checks that all three integers make a triangle`, () => {
-    expect(lib.areaCalc(3, 4, 300000)).to.eql(`Not a triangle, ya dingus`)
+    expect(area.areaCalc(3, 4, 300000)).to.eql(`Not a triangle, ya dingus`)
   })
 })
 
-describe(`name of function`, () => {
+describe(`pokeSort`, () => {
+  const pokeArray = [{
+    id: 4,
+    name: 'charmander',
+    weight: 12.3
+  }, {
+    id: 1,
+    name: 'bulbasaur',
+    weight: 22.4
+  }, {
+    id: 7,
+    name: 'squirtle',
+    weight: 17.9
+  }, {
+    id: 144,
+    name: 'articuno',
+    weight: 60.2
+  }]
 
-  it(`saying what function should do`, () => {
-    expect(lib.nameOfFunction(params)).to.eql(theReturn)
+  it(`should return array sorted by passed parameter`, () => {
+    expect(poke.pokeSort(pokeArray, 'name')).to.eql([ { id: 144, name: 'articuno', weight: 60.2 },
+  { id: 1, name: 'bulbasaur', weight: 22.4 },
+  { id: 4, name: 'charmander', weight: 12.3 },
+  { id: 7, name: 'squirtle', weight: 17.9 } ]
+)
   })
 
-  it(`correctly computes 1! = 1`, () => {
-    expect(lib.factorial(1)).to.eql(1)
+  it(`sort by ascending id`, () => {
+    expect(poke.pokeSort(pokeArray, 'id')).to.eql(
+      [ { id: 1, name: 'bulbasaur', weight: 22.4 },
+        { id: 4, name: 'charmander', weight: 12.3 },
+        { id: 7, name: 'squirtle', weight: 17.9 },
+        { id: 144, name: 'articuno', weight: 60.2 } ]
+    )
   })
 })
