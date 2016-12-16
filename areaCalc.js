@@ -1,6 +1,8 @@
- function areaCalc(x, y, z) {
-   let p = ((x + y + z) / 2)
-   return (Math.sqrt(p * (p - x) * (p - y) * (p - z)))
- }
+module.exports = {
 
- console.log(areaCalc(3, 4, 5));
+  areaCalc(x, y, z) {
+    let p = ((x + y + z) / 2)
+
+    return (Math.sqrt(p * (p - x) * (p - y) * (p - z)))
+  }
+}
