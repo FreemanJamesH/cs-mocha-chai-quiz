@@ -1,0 +1,24 @@
+{
+  "name": "cs-mocha-chai-quiz",
+  "version": "1.0.0",
+  "description": "Hello there. It's time to practice writing tests. Yay.",
+  "main": "areaCalc.js",
+  "dependencies": {
+    "chai": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScottyVG/cs-mocha-chai-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScottyVG/cs-mocha-chai-quiz/issues"
+  },
+  "homepage": "https://github.com/ScottyVG/cs-mocha-chai-quiz#readme"
+}
