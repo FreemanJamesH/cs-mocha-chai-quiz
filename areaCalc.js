@@ -3,4 +3,8 @@
    return (Math.sqrt(p * (p - x) * (p - y) * (p - z)))
  }
 
- console.log(areaCalc(3, 4, 5));
+ // console.log(areaCalc(7, 5, 10));
+
+ module.exports = {
+   areaCalc: areaCalc
+ }
